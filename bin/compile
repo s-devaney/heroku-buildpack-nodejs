@@ -304,9 +304,6 @@ build_dependencies() {
     yarn_2_install "$BUILD_DIR"
   elif $YARN; then
     yarn_node_modules "$BUILD_DIR"
-  elif $PREBUILD; then
-    echo "Prebuild detected (node_modules already exists)"
-    npm_rebuild "$BUILD_DIR"
   else
     npm_node_modules "$BUILD_DIR"
   fi
